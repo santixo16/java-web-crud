@@ -1,3 +1,6 @@
-modelos\ConexionDB.class
+Controladores\AgregarProducto.class
 modelos\Producto.class
 modelos\Categoria.class
+Controladores\test2.class
+modelos\ConexionDB.class
+modelos\test.class

@@ -17,13 +17,16 @@
         <%=prueba%>
         <h1>Agregar Producto</h1>
 
-    <form method="post" action="/AgregarProductoServlet">
+    <form method="POST" action="AgregarProducto">
         ID Producto: <input type="text" name="idProducto"><br>
         Nombre Producto: <input type="text" name="nombreProducto"><br>
         Cantidad Producto: <input type="text" name="cantidadProducto"><br>
         Precio Producto: <input type="text" name="precioProducto"><br>
         Categoria Producto: <input type="text" name="categoriaProducto"><br>
-        <input type="submit" value="Agregar Producto">
+        <input type="submit">
+    </form>
+    <form action="AgregarProducto" method="GET">
+        <button type="submit">Mostrar lista de productos</button>
     </form>
     </body>
 </html>
