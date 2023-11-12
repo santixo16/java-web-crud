@@ -17,16 +17,19 @@
         <h1>Lista de productos</h1>
         <%
             List<Producto> listaProductos = (List) request.getSession().getAttribute("listaProductos");
-            for(Producto prod: listaProductos){           
-            int cont = 1;            
+            int cont = 1;  
+            for(Producto prod: listaProductos){                                 
         %>
+        
         <h3>Producto número <%=cont%></h3>
+        <p>ID: <%=prod.getId()%></p>
         <p>Id producto: <%=prod.getIdProducto()%></p>
         <p>Nombre producto: <%= prod.getNombreProducto() %></p>
         <p>Cantidad: <%= prod.getCantidadProducto() %></p>
+        <p>Precio <%= prod.getPrecioProducto()%></p>
         <p>Categoría producto: <%= prod.getCategoriaProducto() %></p>
         <p>----------------------------------------------------</p>
-        <% cont += 1;%>
+        <% cont = cont + 1;%>
         <% } %>
     </body>
 </html>

@@ -1,24 +1,33 @@
 package modelos;
 
 import java.sql.PreparedStatement;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
 
 /**
  *
  * @author sehernandezc
  */
+@Entity
 public class Producto {
     
-    private int idProducto;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private int id;
+    private String idProducto;
     private String nombreProducto;
-    private int cantidadProducto;
-    private int precioProducto;
+    private String cantidadProducto;
+    private String precioProducto;
     private String categoriaProducto;
     
     public Producto(){
         
     }
 
-    public Producto(int idProducto, String nombreProducto, int cantidadProducto, int precioProducto, String categoriaProducto) {
+        public Producto(int id, String idProducto, String nombreProducto, String cantidadProducto, String precioProducto, String categoriaProducto) {
+        this.id = id;
         this.idProducto = idProducto;
         this.nombreProducto = nombreProducto;
         this.cantidadProducto = cantidadProducto;
@@ -26,11 +35,19 @@ public class Producto {
         this.categoriaProducto = categoriaProducto;
     }
 
-    public int getIdProducto() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }  
+    
+    public String getIdProducto() {
         return idProducto;
     }
 
-    public void setIdProducto(int idProducto) {
+    public void setIdProducto(String idProducto) {
         this.idProducto = idProducto;
     }
 
@@ -42,19 +59,19 @@ public class Producto {
         this.nombreProducto = nombreProducto;
     }
 
-    public int getCantidadProducto() {
+    public String getCantidadProducto() {
         return cantidadProducto;
     }
 
-    public void setCantidadProducto(int cantidadProducto) {
+    public void setCantidadProducto(String cantidadProducto) {
         this.cantidadProducto = cantidadProducto;
     }
 
-    public int getPrecioProducto() {
+    public String getPrecioProducto() {
         return precioProducto;
     }
 
-    public void setPrecioProducto(int precioProducto) {
+    public void setPrecioProducto(String precioProducto) {
         this.precioProducto = precioProducto;
     }
 
@@ -65,7 +82,7 @@ public class Producto {
     public void setCategoriaProducto(String categoriaProducto) {
         this.categoriaProducto = categoriaProducto;
     }    
-    
+    /*
     public void crearProducto(){        
         ConexionDB conector = new ConexionDB();
         conector.conectar();
@@ -88,17 +105,6 @@ public class Producto {
         }
         
     }
-    
-    public void consultarProducto(){
-        
-    }
-    
-    public void listarProducto(){
-        
-    }
-    
-    public void eliminarProducto(){
-        
-    }
-    
+    */
+
 }

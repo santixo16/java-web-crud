@@ -1,6 +1,14 @@
+persistencia\ProductoJpaController.class
 Controladores\AgregarProducto.class
-modelos\Producto.class
+Controladores\EliminarProductoSv.class
 modelos\Categoria.class
-Controladores\test2.class
+modelos\Controladora.class
+modelos\Producto_.class
 modelos\ConexionDB.class
+modelos\Producto.class
+Controladores\test2.class
+persistencia\exceptions\NonexistentEntityException.class
+persistencia\exceptions\PreexistingEntityException.class
+persistencia\ControladoraPersistencia.class
+persistencia\exceptions\IllegalOrphanException.class
 modelos\test.class

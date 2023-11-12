@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import modelos.Controladora;
 import modelos.Producto;
 
 /**
@@ -19,6 +20,7 @@ import modelos.Producto;
  */
 @WebServlet(name="AgregarProductoServlet", urlPatterns={"/AgregarProducto"})
 public class AgregarProducto extends HttpServlet {
+    Controladora control = new Controladora();
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -28,17 +30,25 @@ public class AgregarProducto extends HttpServlet {
         String nombreProducto = request.getParameter("nombreProducto");
         String cantidadProducto = request.getParameter("cantidadProducto");
         String precioProducto = request.getParameter("precioProducto");
-        //String categoriaProducto = request.getParameter("categoriaProducto");
-        System.out.println("Datos traidos: " + idProducto + nombreProducto + cantidadProducto + precioProducto);//
-        System.out.println(getServletInfo());
-    }
+        String categoriaProducto = request.getParameter("categoriaProducto");
+        
+        Producto prod = new Producto();
+        prod.setIdProducto(idProducto);
+        prod.setNombreProducto(nombreProducto);
+        prod.setCantidadProducto(cantidadProducto);
+        prod.setPrecioProducto(precioProducto);
+        prod.setCategoriaProducto(categoriaProducto);
+        
+        control.crearProducto(prod);
+        response.sendRedirect("index.jsp");
+    }   
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            List<Producto> listaProductos = new ArrayList<>();
-            listaProductos.add(new Producto(1, "bate de beisbol", 2, 10000, "deporte"));
-            listaProductos.add(new Producto(2, "lampara", 10, 5000, "hogar"));
+        
+            List<Producto> listaProductos = new ArrayList<>();  
+            listaProductos = control.traerProductos();
             
             HttpSession miSesion = request.getSession();
             miSesion.setAttribute("listaProductos", listaProductos);

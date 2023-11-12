@@ -1,5 +1,13 @@
-C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Controladores\test.java
-C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Modelos\Categoria.java
 C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Modelos\Producto.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Controladores\EliminarProductoSv.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\persistencia\exceptions\IllegalOrphanException.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Controladores\AgregarProducto.java
 C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Modelos\ConexionDB.java
-C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Controladores\AgregarProductoServlet.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\persistencia\exceptions\NonexistentEntityException.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\persistencia\ProductoJpaController.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Modelos\Categoria.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Modelos\test.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Modelos\Controladora.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\Controladores\test2.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\persistencia\exceptions\PreexistingEntityException.java
+C:\Users\santi\Documents\NetBeansProjects\javaCrud\src\main\java\persistencia\ControladoraPersistencia.java
